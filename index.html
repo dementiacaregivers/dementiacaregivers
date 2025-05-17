@@ -14,78 +14,16 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
-        }
-
-        header {
+            min-height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px;
-            background: linear-gradient(90deg, #ffcc00, #ff9900);
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
         }
 
-        .logo img {
-            width: 80px;
-        }
-
-        .navbar {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar li {
-            display: inline;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #333;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            right: 15px;
-            top: 50px;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 12px 16px;
-            text-decoration: none;
-            color: black;
-        }
-
-        .dropdown a:hover {
-            background-color: #f4f4f4;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                display: none;
-            }
-
-            .menu-icon {
-                display: block;
-            }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            flex-grow: 1;
         }
 
         .banner {
@@ -94,6 +32,13 @@
             color: white;
             padding: 50px 20px;
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
+        .banner a {
+            text-decoration: none;
+            color: inherit; /* Inherit text color from the banner */
+            display: block; /* Make the entire banner clickable */
         }
 
         h1 {
@@ -104,12 +49,6 @@
         .banner p {
             color: #444;
             font-size: 1.2em;
-        }
-
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
         }
 
         .section {
@@ -126,6 +65,13 @@
             align-items: center;
             cursor: pointer;
             color: #ff6600;
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%; /* Make the entire h2 clickable */
         }
 
         .plus {
@@ -155,6 +101,7 @@
             background: #222;
             color: white;
             font-size: 0.9em;
+            margin-top: auto;
         }
 
         footer a {
@@ -199,9 +146,11 @@
     </header>
 
     <section class="banner">
-        <h1>Dementia Research Project</h1>
-        <p>Developing a voice assistance app for informal caregivers.</p>
-        <img src="images/dementia-awareness.jpg" alt="Dementia Awareness">
+        <a href="index.html">
+            <h1>Dementia Research Project</h1>
+            <p>Developing a voice assistance app for informal caregivers.</p>
+            <img src="images/dementia-awareness.jpg" alt="Dementia Awareness">
+        </a>
     </section>
 
     <main>
@@ -211,7 +160,7 @@
         </section>
 
         <div class="section light-theme">
-            <h2>Project Description <span class="plus" onclick="toggleContent('desc')">+</span></h2>
+            <h2><a href="project-description.html">Project Description</a> <span class="plus" onclick="toggleContent('desc')">+</span></h2>
             <div id="desc" class="content">
                 <p>The Dementia Research Project at Kennesaw State University is dedicated to developing AI-powered mobile applications that support caregivers of individuals with dementia. Guided by Professors Modupe Akintomide and Xinye Zhang, our research team is focused on understanding caregivers' challenges and designing technology-driven solutions to ease their burden.</p>
                 <p>Our approach follows Community-Based Participatory Research (CBPR), where caregivers and individuals with dementia play an active role in shaping our work. Their firsthand experiences provide invaluable insights that guide us in creating meaningful and effective tools.</p>
@@ -225,7 +174,7 @@
         </div>
 
         <div class="section">
-            <h2>Project Department <span class="plus" onclick="toggleContent('dept')">+</span></h2>
+            <h2><a href="project-department.html">Project Department</a> <span class="plus" onclick="toggleContent('dept')">+</span></h2>
             <div id="dept" class="content">
                 <p>This research project is a collaboration between:</p>
                 <ul>
@@ -237,7 +186,7 @@
         </div>
 
         <div class="section">
-            <h2>Requirements <span class="plus" onclick="toggleContent('req')">+</span></h2>
+            <h2><a href="requirements.html">Requirements</a> <span class="plus" onclick="toggleContent('req')">+</span></h2>
             <div id="req" class="content">
                 <p>We seek passionate individuals to support our AI-driven dementia research. Key responsibilities include:</p>
                 <ul>
@@ -252,7 +201,7 @@
         </div>
 
         <div class="section">
-            <h2>Mission <span class="plus" onclick="toggleContent('mission')">+</span></h2>
+            <h2><a href="mission.html">Mission</a> <span class="plus" onclick="toggleContent('mission')">+</span></h2>
             <div id="mission" class="content">
                 <p>Our mission is to empower dementia caregivers through technology, ensuring they have access to reliable information, financial resources, and personalized support. By leveraging artificial intelligence, we aim to create adaptable tools that cater to the unique needs of each caregiver.</p>
                 <p>Through this initiative, we strive to:</p>
@@ -267,7 +216,7 @@
         </div>
 
         <div class="section">
-            <h2>Undergraduate Research Club <span class="plus" onclick="toggleContent('club')">+</span></h2>
+            <h2><a href="undergraduate-research-club.html">Undergraduate Research Club</a> <span class="plus" onclick="toggleContent('club')">+</span></h2>
             <div id="club" class="content">
                 <p>Undergraduate Research Club</p>
                 <p>Students have the opportunity to collaborate on impactful, team-based research projects through the Undergraduate Research Club. This initiative fosters interdisciplinary learning, allowing students to gain hands-on experience, contribute to real-world studies, and develop valuable research skills while working alongside faculty and peers.</p>
@@ -275,7 +224,7 @@
         </div>
 
         <div class="section">
-            <h2>Team <span class="plus" onclick="toggleContent('team')">+</span></h2>
+            <h2><a href="team.html">Team</a> <span class="plus" onclick="toggleContent('team')">+</span></h2>
             <div id="team" class="content team-content">
                 <h3>Dementia Research Team – Kennesaw State University</h3>
                 <h4>Faculty Advisors</h4>
